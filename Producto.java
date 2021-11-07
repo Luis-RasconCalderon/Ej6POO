@@ -1,3 +1,22 @@
+//Interfaces
+interface Reproductor{
+    String[] reproducirVideo();
+}
+interface Navegador{
+    String[] navegadorInternet();
+}
+interface Portable{
+    String[] mostrarPortable();
+}
+interface TomarFoto{
+    String[] fotografiar();
+}
+interface Jugar{
+    String[] jugarGame();
+}
+interface HacerLlamada{
+    String[] hacerLlamada();
+}
 public class Producto {
     private String precio;
     private String serie;

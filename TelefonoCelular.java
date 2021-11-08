@@ -1,15 +1,23 @@
 public class TelefonoCelular extends Producto implements HacerLlamada, Portable{
 
-    @Override
-    public String[] mostrarPortable() {
-        // TODO Auto-generated method stub
-        return null;
+    public TelefonoCelular(String pre, String ser, String mar, String fab, String ar){
+        precio = pre;
+        serie = ser;
+        marca = mar;
+        fechaFab = fab;
+        marcadorAR = ar;
     }
 
     @Override
-    public String[] hacerLlamada() {
+    public String mostrarPortable() {
         // TODO Auto-generated method stub
-        return null;
+        return "Es portable";
+    }
+
+    @Override
+    public String hacerLlamada(String numero) {
+        // TODO Auto-generated method stub
+        return "Se esta llamando al numero: "+ numero;
     }
     
 }

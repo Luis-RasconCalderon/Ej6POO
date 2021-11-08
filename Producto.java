@@ -1,28 +1,28 @@
 //Interfaces
 interface Reproductor{
-    String[] reproducirVideo();
+    String reproducirVideo();
 }
 interface Navegador{
-    String[] navegadorInternet();
+    String navegadorInternet(String sitio);
 }
 interface Portable{
-    String[] mostrarPortable();
+    String mostrarPortable();
 }
 interface TomarFoto{
-    String[] fotografiar();
+    String fotografiar();
 }
 interface Jugar{
-    String[] jugarGame();
+    String jugarGame();
 }
 interface HacerLlamada{
-    String[] hacerLlamada();
+    String hacerLlamada(String numero);
 }
 public class Producto {
-    private String precio;
-    private String serie;
-    private String marca;
-    private String fechaFab;
-    private String marcadorAR;
+    protected String precio;
+    protected String serie;
+    protected String marca;
+    protected String fechaFab;
+    protected String marcadorAR;
 
     public String getPrecio() {
         return precio;

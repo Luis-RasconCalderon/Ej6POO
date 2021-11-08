@@ -1,21 +1,29 @@
 public class SmartWatch extends Producto implements TomarFoto, Portable, HacerLlamada{
 
-    @Override
-    public String[] hacerLlamada() {
-        // TODO Auto-generated method stub
-        return null;
+    public SmartWatch(String pre, String ser, String mar, String fab, String ar){
+        precio = pre;
+        serie = ser;
+        marca = mar;
+        fechaFab = fab;
+        marcadorAR = ar;
     }
 
     @Override
-    public String[] mostrarPortable() {
+    public String hacerLlamada(String numero) {
         // TODO Auto-generated method stub
-        return null;
+        return "El SmartWatch esta llamando al numero: " + numero;
     }
 
     @Override
-    public String[] fotografiar() {
+    public String mostrarPortable() {
         // TODO Auto-generated method stub
-        return null;
+        return "Es portable";
+    }
+
+    @Override
+    public String fotografiar() {
+        // TODO Auto-generated method stub
+        return "El SmartWatch ha tomado una foto.";
     }
     
 }

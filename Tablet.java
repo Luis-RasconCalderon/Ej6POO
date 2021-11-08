@@ -1,6 +1,7 @@
 public class Tablet extends Producto implements TomarFoto, Navegador, Reproductor, Portable{
 
-    public Tablet(String pre, String ser, String mar, String fab, String ar){
+    public Tablet(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

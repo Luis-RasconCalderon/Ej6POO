@@ -2,7 +2,8 @@ public class Smartphone extends Producto implements HacerLlamada, TomarFoto, Nav
 
 
 
-    public Smartphone(String pre, String ser, String mar, String fab, String ar){
+    public Smartphone(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

@@ -1,6 +1,7 @@
 public class TelefonoCelular extends Producto implements HacerLlamada, Portable{
 
-    public TelefonoCelular(String pre, String ser, String mar, String fab, String ar){
+    public TelefonoCelular(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

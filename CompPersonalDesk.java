@@ -1,6 +1,7 @@
 public class CompPersonalDesk extends Producto implements Navegador, Reproductor, Jugar{
 
-    public CompPersonalDesk(String pre, String ser, String mar, String fab, String ar){
+    public CompPersonalDesk(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

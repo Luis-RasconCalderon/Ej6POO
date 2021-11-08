@@ -18,6 +18,7 @@ interface HacerLlamada{
     String hacerLlamada(String numero);
 }
 public class Producto {
+    protected String nombre;
     protected String precio;
     protected String serie;
     protected String marca;

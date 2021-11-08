@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vista {
@@ -38,6 +39,14 @@ public class Vista {
         }
         return suc;
     }
+
+    public int escogerProducto(ArrayList<String[]> prodSucursal1){
+        System.out.println("\nQue producto dese utilizar?: ");
+        for(int s = 0; s<prodSucursal1.size();s++){
+                System.out.println("");
+        }
+
+    } 
 
 
 

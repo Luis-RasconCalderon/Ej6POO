@@ -8,9 +8,9 @@ import java.io.FileNotFoundException;
 
 
 public class PrepararCSV {
-    private File path = new File("");
-    private File path2 = new File("");
-    private File path3 = new File("");
+    private File path = new File("/Ej6POO/Tienda 1.csv");
+    private File path2 = new File("/Ej6POO/Tienda 2.csv");
+    private File path3 = new File("/Ej6POO/Tienda 3.csv");
 
 
     public ArrayList<String[]> leerSucursal1(){

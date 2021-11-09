@@ -2,7 +2,8 @@ import java.lang.reflect.Method;
 
 public class CamFoto extends Producto implements TomarFoto, Reproductor, Portable{
 
-    public CamFoto(String pre, String ser, String mar, String fab, String ar){
+    public CamFoto(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

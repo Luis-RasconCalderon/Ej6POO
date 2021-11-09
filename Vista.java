@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vista {
@@ -19,19 +20,34 @@ public class Vista {
     public String numeroAllamar(){
         System.out.println("\nIngrese el numero de telefono a llamar: ");
         int h = 10;
-        String nume = "";
-        while(h !=0){
-            try {
-                int num = sc.nextInt();
-                h = 0;
-                nume = Integer.toString(num);
-                
-            } catch (Exception e) {
-                System.out.println("\n Ingrese un numero,");
-            }
-        }
+        String nume = sc.nextLine();
         return nume;
         
     }
+
+    public String elegirSucursal(){
+        System.out.println("Que sucursal desea utilizar?: (Sucursal 1, Sucursal 2, Sucursal 3)");   
+        int i = 10;
+        String suc = ""; 
+        while(i != 0){
+            suc = sc.nextLine();
+            if(suc.equals("1")||suc.equals("2")||suc.equals("3")){
+                i = 0;
+            }else{
+                System.out.println("Ingrese una sucursal valida (1-3)");
+            }
+        }
+        return suc;
+    }
+
+    public int escogerProducto(ArrayList<String[]> prodSucursal1){
+        System.out.println("\nQue producto dese utilizar?: ");
+        for(int s = 0; s<prodSucursal1.size();s++){
+                System.out.println("");
+        }
+
+    } 
+
+
 
 }

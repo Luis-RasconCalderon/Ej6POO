@@ -1,7 +1,8 @@
 public class SmartTV extends Producto implements Navegador, Reproductor{
 
 
-    public SmartTV(String pre, String ser, String mar, String fab, String ar){
+    public SmartTV(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;
@@ -20,5 +21,7 @@ public class SmartTV extends Producto implements Navegador, Reproductor{
         // TODO Auto-generated method stub
         return "*Se esta navegando en el sitio: "+sitio +" *";
     }
+
+    
     
 }

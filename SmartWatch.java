@@ -1,6 +1,7 @@
 public class SmartWatch extends Producto implements TomarFoto, Portable, HacerLlamada{
 
-    public SmartWatch(String pre, String ser, String mar, String fab, String ar){
+    public SmartWatch(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

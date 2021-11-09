@@ -1,7 +1,8 @@
 public class CompPersonalLap extends Producto implements Navegador, Jugar, Reproductor, Portable{
 
 
-    public CompPersonalLap(String pre, String ser, String mar, String fab, String ar){
+    public CompPersonalLap(String nom, String pre, String ser, String mar, String fab, String ar){
+        nombre = nom;
         precio = pre;
         serie = ser;
         marca = mar;

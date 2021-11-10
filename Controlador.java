@@ -6,7 +6,7 @@ public class Controlador{
         PrepararCSV prep = new PrepararCSV();
         ArrayList<Producto> carrito = new ArrayList<Producto>();
         ArrayList<String[]> prodSucursal = new ArrayList<String[]>();
-      
+      //mensaje de bienvenida y menu de opciones que se pueden realizar
         vs.bienvenida();
         int w = 10;
         String sucursal = vs.elegirSucursal();
@@ -30,7 +30,7 @@ public class Controlador{
                     op = vs.preCarrito();
                     
                 }
-
+//Smartphone y sus posibles accipones que realizar al probarlo
                 if(producto == 1){
                     Smartphone sp = new Smartphone(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -62,7 +62,7 @@ public class Controlador{
                             }
                         }
                     }
-                    
+ //Telefono celular y sus funciones para probarlo                   
                 }else if(producto == 2){
                     TelefonoCelular tc = new TelefonoCelular(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -87,7 +87,7 @@ public class Controlador{
                             }
                         }
                     }
-                           
+   //Telefono fijo y sus funciones para probarlo                           
                 }else if(producto == 3){
                     TeleFijo tf = new TeleFijo(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -111,7 +111,7 @@ public class Controlador{
                         }
                         
                     }
-                    
+// Camaras fotograficas y sus funciones para probarlo      
                 }else if(producto == 4){
                     CamFoto ca = new CamFoto(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -137,7 +137,7 @@ public class Controlador{
                         }
                         }
                     }
-                    
+//Computadora personal (Desk) y sus funciones para probarlo                     
                 }else if(producto == 5){
                     CompPersonalDesk desk = new CompPersonalDesk(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -164,7 +164,7 @@ public class Controlador{
                         }
                         }
                     }
-                        
+//Computadora personal Laptop y sus funciones para probarlo 
                 }else if(producto == 6){
                     CompPersonalLap lap = new CompPersonalLap(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -193,7 +193,7 @@ public class Controlador{
                             }
                         }
                     }
-                        
+       //SmartTv y sus funciones para probarlo                  
                 }else if(producto == 7){
                     SmartTV tv = new SmartTV(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -218,7 +218,7 @@ public class Controlador{
                         }
                         }
                     }
-                        
+           //Tablet y sus funciones para probarlo              
                 }else if(producto == 8){
                     Tablet t = new Tablet(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -248,7 +248,7 @@ public class Controlador{
                             }       
                         }
                 }
-                        
+        //smartwatch y sus funciones para probarlo          
                 }else if(producto == 9){
                     SmartWatch sw = new SmartWatch(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -277,7 +277,7 @@ public class Controlador{
                     }   
                 }                     
                 }
-                    
+      //Funciones del carrito              
             }else if(menu == 2){
                 int l = vs.filtradoCarrito();
                 if(l == 2){

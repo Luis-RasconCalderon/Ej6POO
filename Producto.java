@@ -44,6 +44,9 @@ public class Producto {
     public String getMarcadorAR() {
         return marcadorAR;
     }
+    public String getNombre() {
+        return nombre;
+    }
 
     
 

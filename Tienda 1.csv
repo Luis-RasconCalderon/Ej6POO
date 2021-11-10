@@ -1,9 +1,10 @@
 ﻿nombre,precio,serie,marca,fecha,marcador AR
-Iphone,1000,11,Apple,9/5/19,93341
-Alcatel ,15,1066D,Alcatel,3/5/20,41341
-Canon,500,2000D,Canon,5/5/20,13243
-ROG,5000,Strix,Asus,6/7/19,41345
-Dell G5,1200,G5,Dell,3/5/20,12343
-LG Oled,700,Oled,LG,5/5/20,43243
-Ipad Pro 11,2000,Pro 11,Apple,6/7/19,65463
-Apple watch 6,900,6,Apple,7/5/19,43243
+Iphone,1000.0,11,Apple,9/5/19,93341
+Alcatel ,15.0,1066D,Alcatel,3/5/20,41341
+LandLineC, 200.0, 5HDF, Claro, 8/6/2020, 21654
+Canon,500.0,2000D,Canon,5/5/20,13243
+ROG,5000.0,Strix,Asus,6/7/19,41345
+Dell G5,1200.0,G5,Dell,3/5/20,12343
+LG Oled,700.0,Oled,LG,5/5/20,43243
+Ipad Pro 11,2000.0,Pro 11,Apple,6/7/19,65463
+Apple watch 6,900.0,6,Apple,7/5/19,43243

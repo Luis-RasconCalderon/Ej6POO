@@ -3,7 +3,8 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.Collections;
 import java.io.FileNotFoundException;
 
 
@@ -75,6 +76,34 @@ public class PrepararCSV {
         return sucursal3;
     }
 
+	public ArrayList<Producto> ordenarCarritoPrecio(ArrayList<Producto> carritoSinO){
+		ArrayList<Producto> CarritoOrdenado = new ArrayList<Producto>();
+		ArrayList<String> precio = new ArrayList<String>();
+
+
+		for(int p = 0;p < carritoSinO.size();p++){
+            precio.add(carritoSinO.get(p).getPrecio());
+        }
+		
+		Double[] i = new Double[carritoSinO.size()];
+		for(int t = 0;t<precio.size();t++){
+			i[t] = Double.parseDouble(precio.get(t));
+		}
+
+		Arrays.sort(i, Collections.reverseOrder());
+
+		for(int k = 0; k<i.length;k++){
+			for(int g = 0;g<carritoSinO.size();g++){
+				if(Double.toString(i[k]).equals(carritoSinO.get(g).getPrecio())){
+					CarritoOrdenado.add(carritoSinO.get(g));
+					g = g+carritoSinO.size();
+				}
+			}
+		}
+
+
+		return CarritoOrdenado;
+	}
 
 
 }

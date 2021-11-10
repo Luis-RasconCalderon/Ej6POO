@@ -1,9 +1,10 @@
 ﻿nombre,precio,serie,marca,fecha,marcador AR
-Huawei P11,500,P11,Huawei,4/6/21,54351
+Huawei P11,500.0,P11,Huawei,4/6/21,54351
 Alcatel 10.54,20,10.4,Alcatel,5/7/20,32131
-Canon,100,90D,Canon,5/5/17,34123
-AlienWare,7000,Area 51,Dell,4/6/21,32144
-ROG,1200,G15,Asus,6/7/18,32141
-Samsung,1000,Oled,Samsung,5/5/17,86786
-Ipad air 8,1000,Air 8,Apple,4/6/21,86645
-Apple watch SE,500,SE,Apple,6/7/18,43524
+LandlineT, 300.0, 98KJ, Tigo, 5/6/2020,3251
+Canon,100.0,90D,Canon,5/5/17,34123
+AlienWare,7000.0,Area 51,Dell,4/6/21,32144
+ROG,1200.0,G15,Asus,6/7/18,32141
+Samsung,1000.0,Oled,Samsung,5/5/17,86786
+Ipad air 8,1000.0,Air 8,Apple,4/6/21,86645
+Apple watch SE,500.0,SE,Apple,6/7/18,43524

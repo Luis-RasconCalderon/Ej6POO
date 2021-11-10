@@ -1,9 +1,10 @@
 ﻿nombre,precio,serie,marca,fecha,marcador AR
-Samsung A50,200,A50,Samsung,5/10/20,42342
-Alcatel 2008G,20,2008G,Alcatel,7/8/20,65434
-Canon,1000,200,Canon,7-Jun,54353
-AlienWare,8000,Area 51,Dell,30-5-2018,23525
-ROG,9000,3080,Asus,8-Jun,54223
-Samsung,5000,Oled,Samsung,29-05-2020,53423
-Ipad air 8,6000,Air 8,Apple,8-Apr,41343
-Apple watch 5,700,5,Apple,30-6-2017,43433
+Samsung A50,200.0,A50,Samsung,5/10/20,42342
+Alcatel 2008G,20.0,2008G,Alcatel,7/8/20,65434
+LandLineM, 8897YT, 150.0, movistar, 9/8/2020, 46879
+Canon,1000.0,200,Canon,7-Jun,54353
+AlienWare,8000.0,Area 51,Dell,30-5-2018,23525
+ROG,9000.0,3080,Asus,8-Jun,54223
+Samsung,5000.0,Oled,Samsung,29-05-2020,53423
+Ipad air 8,6000.0,Air 8,Apple,8-Apr,41343
+Apple watch 5,700.0,5,Apple,30-6-2017,43433

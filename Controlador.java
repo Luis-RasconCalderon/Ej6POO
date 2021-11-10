@@ -21,9 +21,13 @@ public class Controlador{
                     op = vs.preCarrito();
                 }else if(sucursal.equals("2")){
                     prodSucursal = prep.leerSucursal2();
+                    producto = vs.escogerProducto(prodSucursal);
+                    op = vs.preCarrito();
 
                 }else if(sucursal.equals("3")){
                     prodSucursal = prep.leerSucursal3();
+                    producto = vs.escogerProducto(prodSucursal);
+                    op = vs.preCarrito();
                     
                 }
 
@@ -49,16 +53,16 @@ public class Controlador{
                                 vs.emitirMensaje(sp.fotografiar());
                             }else if(probar == 6){
                                 h = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(sp);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
+                            }
                             }
                         }
-
-                        int agregar = vs.agregarAcarrito();
-                        if(agregar == 1){
-                            carrito.add(sp);
-                        }else if(agregar==2){
-                            vs.emitirMensaje("\nPuede seguir comprando.\n");
-                        }
                     }
+                    
                 }else if(producto == 2){
                     TelefonoCelular tc = new TelefonoCelular(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -74,8 +78,16 @@ public class Controlador{
                                 vs.emitirMensaje(tc.mostrarPortable());
                             }else if(probar == 3){
                                 i = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(tc);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
+                            }
+                            }
                         }
-                    }       
+                    }
+                           
                 }else if(producto == 3){
                     TeleFijo tf = new TeleFijo(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
@@ -86,18 +98,26 @@ public class Controlador{
                             int probar = vs.probarTelefonoFijo();
                             if(probar == 1){
                                 String numero = vs.numeroAllamar();
-                                vs.emitirMensaje(tc.hacerLlamada(numero));
+                                vs.emitirMensaje(tf.hacerLlamada(numero));
                             }else if(probar == 2){
                                 j = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(tf);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
                         }
+                        }
+                        
                     }
+                    
                 }else if(producto == 4){
                     CamFoto ca = new CamFoto(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(ca);
                     }else if(op == 2){
-                }int k = 10;
+                int k = 10;
                 while( k !=0 ){
                     int probar = vs.probarCamara();
                     if(probar == 1){
@@ -108,14 +128,22 @@ public class Controlador{
                                 vs.emitirMensaje(ca.mostrarPortable());
                             }else if(probar == 4){
                                 k = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(ca);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
                         }
+                        }
+                    }
+                    
                 }else if(producto == 5){
                     CompPersonalDesk desk = new CompPersonalDesk(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(desk);
                     }else if(op == 2){
-                }int l = 10;
+                int l = 10;
                 while( l !=0 ){
                     int probar = vs.probarDesk();
                     if(probar == 1){
@@ -127,33 +155,51 @@ public class Controlador{
                                 vs.emitirMensaje(desk.reproducirVideo());
                             }else if(probar == 4){
                                 l = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(desk);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
                         }
+                        }
+                    }
+                        
                 }else if(producto == 6){
                     CompPersonalLap lap = new CompPersonalLap(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(lap);
                     }else if(op == 2){
-                }int m = 10;
+                int m = 10;
                 while( m !=0 ){
-                    int probar = vs.probarSmarPhone();
+                    int probar = vs.probarLap();
                     if(probar == 1){
                         String sitio = vs.introducirSitio();
                                 vs.emitirMensaje(lap.navegadorInternet(sitio));
                             }else if(probar == 2){
-                                vs.emitirMensaje(lap.mostrarPortable());
-                            }else if(probar == 3){
                                 vs.emitirMensaje(lap.reproducirVideo());
+                            }else if(probar == 3){
+                                vs.emitirMensaje(lap.jugarGame());
+                            }else if(probar == 4){
+                                vs.emitirMensaje(lap.mostrarPortable());
                             }else if(probar == 5){
                                 m = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(lap);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
+                            }
                             }
                         }
+                    }
+                        
                 }else if(producto == 7){
                     SmartTV tv = new SmartTV(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(tv);
                     }else if(op == 2){
-                }int n = 10;
+                int n = 10;
                 while( n !=0 ){
                     int probar = vs.probarSmartTV();
                     if(probar == 1){
@@ -163,14 +209,22 @@ public class Controlador{
                                 vs.emitirMensaje(tv.reproducirVideo());
                             }else if(probar == 3){
                                 n = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(tv);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
                         }
+                        }
+                    }
+                        
                 }else if(producto == 8){
                     Tablet t = new Tablet(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(t);
                     }else if(op == 2){
-                }int o = 10;
+                int o = 10;
                 while( o !=0 ){
                     int probar = vs.probarTablet();
                     if(probar == 1){
@@ -182,16 +236,26 @@ public class Controlador{
                                 vs.emitirMensaje(t.fotografiar());
                             }else if(probar == 4){
                                 vs.emitirMensaje(t.mostrarPortable());
-                            }else if(probar == 4){
+                            }else if(probar == 5){
                                 o = 0;
+                            
+                                int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(t);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
+                            }       
                         }
+                }
+                        
                 }else if(producto == 9){
                     SmartWatch sw = new SmartWatch(prodSucursal.get(producto)[0], prodSucursal.get(producto)[1], prodSucursal.get(producto)[2], prodSucursal.get(producto)[3], prodSucursal.get(producto)[4], prodSucursal.get(producto)[5]);
                     if(op == 1){
                         carrito.add(sw);
                     }else if(op == 2){
-                }int p = 10;
+                
+                int p = 10;
                 while( p !=0 ){
                     int probar = vs.probarTablet();
                     if(probar == 1){
@@ -203,13 +267,39 @@ public class Controlador{
                                 vs.emitirMensaje(sw.hacerLlamada(numero));
                             }else if(probar == 4){    
                                 p = 0;
+                            int agregar = vs.agregarAcarrito();
+                            if(agregar == 1){
+                                carrito.add(sw);
+                            }else if(agregar==2){
+                                vs.emitirMensaje("\nPuede seguir comprando.\n");
                             }
                         }
+                    }   
+                }                     
+                }
                     
             }else if(menu == 2){
+                int l = vs.filtradoCarrito();
+                if(l == 2){
+                vs.emitirMensaje("\n");
                 vs.mostrarCarrito(carrito);
+                vs.emitirMensaje("\n");
+                }else if(l == 1){
+                    ArrayList<Producto> carritoOrdenado = prep.ordenarCarritoPrecio(carrito);
+                    vs.emitirMensaje("\n");
+                    vs.mostrarCarrito(carritoOrdenado);
+                    vs.emitirMensaje("\n");
+                }
             }else if(menu == 3){
-                //Aqui se cierra el programa con un System.exit(0);
+                vs.emitirMensaje("\n");
+                int r = vs.eliminarObjeto(carrito);
+                carrito.remove(r);
+            }else if(menu == 4){
+                vs.despedida();
             }
         }
+    }
+}
+        
+    
     

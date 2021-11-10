@@ -31,6 +31,7 @@ public class Vista {
     }
 //Preguntar que sucursal desea usar el usuario para consultar productos o realizar sus compras
     public String elegirSucursal(){
+        System.out.println("\n");
         System.out.println("Que sucursal desea utilizar?: (Sucursal 1, Sucursal 2, Sucursal 3)");   
         int i = 10;
         String suc = ""; 
@@ -59,7 +60,7 @@ public class Vista {
         while(a !=0 ){
             pro = sc.nextLine();
 
-            if(pro.equals("1")||pro.equals("2")||pro.equals("3")||pro.equals("4")||pro.equals("5")||pro.equals("6")||pro.equals("7")||pro.equals("8")){
+            if(pro.equals("1")||pro.equals("2")||pro.equals("3")||pro.equals("4")||pro.equals("5")||pro.equals("6")||pro.equals("7")||pro.equals("8")||pro.equals("9")){
                 a = 0;
                 selec = pro;
             }else{
@@ -92,17 +93,20 @@ public class Vista {
     }
 //Menú principal
     public int menu(){
-        System.out.println("Que desea hacer?: \n1)Agregar producto\n2)Ver carrito\n3)Comprar todo en carrito y cerrar");
+        System.out.println("\n");
+        System.out.println("Que desea hacer?: \n1)Agregar producto\n2)Ver carrito\n3)Eliminar objeto del carrito\n4)Comprar todo en carrito y cerrar");
         int b = 10;
         String men = "";
         String selec = "";
 
         while(b !=0 ){
             men = sc.nextLine();
+            System.out.println("\n");
             if(men.equals("1")||men.equals("2")||men.equals("3")){
                 b = 0;
                 selec = men;
             }else{
+                System.out.println("\n");
                 System.out.println("\n Ingrese una opcion correcta");
             }
         }
@@ -305,6 +309,53 @@ public class Vista {
 
         return Integer.parseInt(selec);
     }
+
+    public int filtradoCarrito(){
+        System.out.println("Desea filtrar el carrito por precio?: \n1)Si\n2)No");
+        int b = 10;
+        String pr = "";
+        String selec = "";
+
+        while(b !=0 ){
+            pr = sc.nextLine();
+
+            if(pr.equals("1")||pr.equals("2")){
+                b = 0;
+                selec = pr;
+            }else{
+                System.out.println("\n Ingrese una opcion correcta");
+            }
+        }
+
+        return Integer.parseInt(selec);
+    }
+
+
+    public int eliminarObjeto(ArrayList<Producto> carrito){
+        System.out.println("Que objeto desea retirar del carrito?: ");
+        for(int c = 0; c<carrito.size();c++){
+            System.out.println((c+1)+ ") "+carrito.get(c).getNombre()+ " "+carrito.get(c).getMarca()+" " + carrito.get(c).getPrecio());
+        }
+        int k = 10;
+        String elim = "";
+        while(k!=0){
+            String el = sc.nextLine();
+            if(Integer.parseInt(el)<carrito.size()){
+                k = 0;
+                elim = el; 
+            }
+        }
+
+        return Integer.parseInt(elim);
+    }
+
+    public void mostrarCarrito(ArrayList<Producto> carrito){
+        System.out.println("Nombre "+ " Marca "+ " Precio");
+        for(int c = 0; c<carrito.size();c++){
+            System.out.println(carrito.get(c).getNombre()+" "+ carrito.get(c).getMarca()+" " + carrito.get(c).getPrecio());
+        }
+    }
+	
 
 
 
